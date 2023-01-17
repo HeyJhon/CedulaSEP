@@ -291,7 +291,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1514, 669);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1284, 669);
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgvCedulas);

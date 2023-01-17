@@ -91,7 +91,8 @@ namespace CedulaSEP
             string gradoGrupo = cedulaSeleccionada.Texto52_GradoYGrupo;
             txt52_Grado.Text = gradoGrupo.Substring(0, 1);
             txt52_Grupo.Text = gradoGrupo.Substring(3, 1);
-            txt100_NombreDirector.Text = cedulaSeleccionada.NombreDirector;
+            txt54_NombreDirector.Text = cedulaSeleccionada.NombreDirector;
+            txt53_InscritoEn.Text = cedulaSeleccionada.InscritoEn;
 
         }
         private void frmDatosAlumno_Load(object sender, EventArgs e)
@@ -170,7 +171,9 @@ namespace CedulaSEP
                     Texto50_Cct = txt50_Cct.Text,
                     Texto51_Turno = txt51_Turno.Text,
                     Texto52_GradoYGrupo = txt52_Grado.Text +" \"" + txt52_Grupo.Text + "\"",
-                    NombreDirector = txt100_NombreDirector.Text
+                    NombreDirector = txt54_NombreDirector.Text,
+                    InscritoEn = txt53_InscritoEn.Text
+
                 };
                 cedulaContext.DataInfos.Add(cedula);
                 cedulaContext.SaveChanges();
@@ -245,6 +248,8 @@ namespace CedulaSEP
                 cedulaEncontrada.Texto50_Cct = txt50_Cct.Text;
                 cedulaEncontrada.Texto51_Turno = txt51_Turno.Text;
                 cedulaEncontrada.Texto52_GradoYGrupo = txt52_Grado.Text + " \"" + txt52_Grupo.Text + "\"";
+                cedulaEncontrada.InscritoEn = txt53_InscritoEn.Text;
+                cedulaEncontrada.NombreDirector = txt54_NombreDirector.Text;
                 cedulaContext.DataInfos.Update(cedulaEncontrada);
                 cedulaContext.SaveChanges();
             }
@@ -286,7 +291,8 @@ namespace CedulaSEP
             {
                 try
                 {
-                    PdfReader pdfReader = new PdfReader(@"Cedula.pdf");
+                    string nombreCedulaEdit = "CedulaV2.pdf";
+                    PdfReader pdfReader = new PdfReader(nombreCedulaEdit);
 
                     string nombreCedula = cedulaSeleccionada.Texto52_GradoYGrupo.Trim().Replace("\"","").Replace(" ","") +"\\"+ cedulaSeleccionada.Texto3_Nia + "_Cedula.pdf";
 
@@ -296,7 +302,7 @@ namespace CedulaSEP
 
 
                     stamper.AcroFields.SetField("Texto1", cedulaSeleccionada.Texto1_CicloEscolar);
-                    stamper.AcroFields.SetField("Texto2", cedulaSeleccionada.Texto2_Fecha.Value.ToString("dd/MM/yyyy"));
+                    stamper.AcroFields.SetField("Texto2", cedulaSeleccionada.Texto2_Fecha.Value.ToString("yyyy/MM/dd"));
                     stamper.AcroFields.SetField("Texto3", cedulaSeleccionada.Texto3_Nia.ToString());
 
                     string nombreCompleto = $"{cedulaSeleccionada.Texto4_ApellidoPaterno}                                             " +
@@ -306,7 +312,7 @@ namespace CedulaSEP
                     stamper.AcroFields.SetField("Texto4", nombreCompleto);
                     stamper.AcroFields.SetField("Texto5", cedulaSeleccionada.Texto5_GeneroH == "1" ? "X" : "");
                     stamper.AcroFields.SetField("Texto6", cedulaSeleccionada.Texto6_GeneroM == "1" ? "X" : "");
-                    stamper.AcroFields.SetField("Texto7", cedulaSeleccionada.Texto7_FechaNacimiento.Value.ToString("dd/MM/yyyy"));
+                    stamper.AcroFields.SetField("Texto7", cedulaSeleccionada.Texto7_FechaNacimiento.Value.ToString("yyyy/MM/dd"));
                     stamper.AcroFields.SetField("Texto8", cedulaSeleccionada.Texto8_EntidadNacimiento);
                     stamper.AcroFields.SetField("Texto9", cedulaSeleccionada.Texto9_Curp);
                     stamper.AcroFields.SetField("Texto10", cedulaSeleccionada.Texto10_TipoSangre);
@@ -358,9 +364,11 @@ namespace CedulaSEP
                     stamper.AcroFields.SetField("Texto55", cedulaSeleccionada.Texto55_MunicipioRegistro);
                     stamper.AcroFields.SetField("Texto56", cedulaSeleccionada.Texto56_AñoRegistro);
                     stamper.AcroFields.SetField("Texto49", cedulaSeleccionada.Texto49_NombrePadreOTutor);
-                    stamper.AcroFields.SetField("Texto50", cedulaSeleccionada.Texto50_Cct);
-                    stamper.AcroFields.SetField("Texto51", cedulaSeleccionada.Texto51_Turno);
-                    stamper.AcroFields.SetField("Texto52", cedulaSeleccionada.Texto52_GradoYGrupo);
+                    stamper.AcroFields.SetField("Texto50_1", cedulaSeleccionada.Texto50_Cct);
+                    stamper.AcroFields.SetField("Texto51_1", cedulaSeleccionada.Texto51_Turno);
+                    stamper.AcroFields.SetField("Texto52_1", cedulaSeleccionada.Texto52_GradoYGrupo);
+                    stamper.AcroFields.SetField("Texto53_1", cedulaSeleccionada.InscritoEn);
+                    stamper.AcroFields.SetField("Texto54_1", "          " + cedulaSeleccionada.NombreDirector);
 
                     // Cerramos el PdfStamper
                     stamper.Close();

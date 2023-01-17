@@ -63,5 +63,6 @@
         public string? Texto51_Turno { get; set; }
         public string? Texto52_GradoYGrupo { get; set; }
         public string? NombreDirector { get; set; }
+        public string? InscritoEn { get; set; }
     }
 }

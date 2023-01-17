@@ -24,7 +24,7 @@ namespace CedulaSEP
             if (!formOpen)
             {
                 frmDatosAlumno frmDatosAlumno = new (null);
-                frmDatosAlumno.MdiParent = this;
+               // frmDatosAlumno.MdiParent = this;
                 frmDatosAlumno.Show();
             }
         }
@@ -47,7 +47,7 @@ namespace CedulaSEP
             if (!formOpen)
             {
                 frmConsultaCedulas frmConsultaCedulas = new ();
-                frmConsultaCedulas.MdiParent = this;
+                //frmConsultaCedulas.MdiParent = this;
                 frmConsultaCedulas.Name = "frmConsultaCedulas";
                 frmConsultaCedulas.Show();
             }

@@ -107,13 +107,15 @@
             this.txt22_CurpTutor = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt53_InscritoEn = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
             this.txt52_Grupo = new System.Windows.Forms.ComboBox();
             this.txt52_Grado = new System.Windows.Forms.ComboBox();
             this.txt40_FichaSignaletica = new System.Windows.Forms.CheckBox();
             this.txt39_DocumentoNaturalizacionSRE = new System.Windows.Forms.CheckBox();
             this.txt38_DocumentoMigratorio = new System.Windows.Forms.CheckBox();
             this.txt37_ActaNacimiento = new System.Windows.Forms.CheckBox();
-            this.txt100_NombreDirector = new System.Windows.Forms.TextBox();
+            this.txt54_NombreDirector = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.txt51_Turno = new System.Windows.Forms.TextBox();
@@ -1000,13 +1002,15 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.txt53_InscritoEn);
+            this.groupBox3.Controls.Add(this.label49);
             this.groupBox3.Controls.Add(this.txt52_Grupo);
             this.groupBox3.Controls.Add(this.txt52_Grado);
             this.groupBox3.Controls.Add(this.txt40_FichaSignaletica);
             this.groupBox3.Controls.Add(this.txt39_DocumentoNaturalizacionSRE);
             this.groupBox3.Controls.Add(this.txt38_DocumentoMigratorio);
             this.groupBox3.Controls.Add(this.txt37_ActaNacimiento);
-            this.groupBox3.Controls.Add(this.txt100_NombreDirector);
+            this.groupBox3.Controls.Add(this.txt54_NombreDirector);
             this.groupBox3.Controls.Add(this.label62);
             this.groupBox3.Controls.Add(this.label61);
             this.groupBox3.Controls.Add(this.txt51_Turno);
@@ -1048,6 +1052,26 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DOCUMENTO PROBATORIO";
             // 
+            // txt53_InscritoEn
+            // 
+            this.txt53_InscritoEn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt53_InscritoEn.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt53_InscritoEn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txt53_InscritoEn.Location = new System.Drawing.Point(1208, 201);
+            this.txt53_InscritoEn.Name = "txt53_InscritoEn";
+            this.txt53_InscritoEn.Size = new System.Drawing.Size(395, 27);
+            this.txt53_InscritoEn.TabIndex = 53;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(1071, 202);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(89, 17);
+            this.label49.TabIndex = 97;
+            this.label49.Text = "INSCRITO EN:";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // txt52_Grupo
             // 
             this.txt52_Grupo.FormattingEnabled = true;
@@ -1061,7 +1085,7 @@
             this.txt52_Grupo.Location = new System.Drawing.Point(1486, 254);
             this.txt52_Grupo.Name = "txt52_Grupo";
             this.txt52_Grupo.Size = new System.Drawing.Size(74, 25);
-            this.txt52_Grupo.TabIndex = 95;
+            this.txt52_Grupo.TabIndex = 57;
             this.txt52_Grupo.Text = "A";
             // 
             // txt52_Grado
@@ -1077,7 +1101,7 @@
             this.txt52_Grado.Location = new System.Drawing.Point(1406, 254);
             this.txt52_Grado.Name = "txt52_Grado";
             this.txt52_Grado.Size = new System.Drawing.Size(74, 25);
-            this.txt52_Grado.TabIndex = 94;
+            this.txt52_Grado.TabIndex = 56;
             this.txt52_Grado.Text = "1";
             // 
             // txt40_FichaSignaletica
@@ -1120,15 +1144,15 @@
             this.txt37_ActaNacimiento.Text = "ACTA DE NACIMIENTO";
             this.txt37_ActaNacimiento.UseVisualStyleBackColor = true;
             // 
-            // txt100_NombreDirector
+            // txt54_NombreDirector
             // 
-            this.txt100_NombreDirector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txt100_NombreDirector.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt100_NombreDirector.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txt100_NombreDirector.Location = new System.Drawing.Point(1073, 308);
-            this.txt100_NombreDirector.Name = "txt100_NombreDirector";
-            this.txt100_NombreDirector.Size = new System.Drawing.Size(530, 27);
-            this.txt100_NombreDirector.TabIndex = 56;
+            this.txt54_NombreDirector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt54_NombreDirector.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt54_NombreDirector.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txt54_NombreDirector.Location = new System.Drawing.Point(1073, 308);
+            this.txt54_NombreDirector.Name = "txt54_NombreDirector";
+            this.txt54_NombreDirector.Size = new System.Drawing.Size(530, 27);
+            this.txt54_NombreDirector.TabIndex = 58;
             // 
             // label62
             // 
@@ -1158,7 +1182,7 @@
             this.txt51_Turno.Location = new System.Drawing.Point(1245, 252);
             this.txt51_Turno.Name = "txt51_Turno";
             this.txt51_Turno.Size = new System.Drawing.Size(110, 27);
-            this.txt51_Turno.TabIndex = 53;
+            this.txt51_Turno.TabIndex = 55;
             // 
             // label60
             // 
@@ -1178,7 +1202,7 @@
             this.txt50_Cct.Location = new System.Drawing.Point(1073, 252);
             this.txt50_Cct.Name = "txt50_Cct";
             this.txt50_Cct.Size = new System.Drawing.Size(110, 27);
-            this.txt50_Cct.TabIndex = 52;
+            this.txt50_Cct.TabIndex = 54;
             // 
             // label59
             // 
@@ -1198,7 +1222,7 @@
             this.txt49_NombreYFirmaPadre.Location = new System.Drawing.Point(29, 303);
             this.txt49_NombreYFirmaPadre.Name = "txt49_NombreYFirmaPadre";
             this.txt49_NombreYFirmaPadre.Size = new System.Drawing.Size(516, 27);
-            this.txt49_NombreYFirmaPadre.TabIndex = 55;
+            this.txt49_NombreYFirmaPadre.TabIndex = 52;
             // 
             // label58
             // 
@@ -1494,7 +1518,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(898, 15);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(166, 49);
-            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.TabIndex = 60;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -1505,7 +1529,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(1081, 13);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(166, 49);
-            this.btnImprimir.TabIndex = 11;
+            this.btnImprimir.TabIndex = 61;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
@@ -1514,8 +1538,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1674, 1024);
+            this.ClientSize = new System.Drawing.Size(1284, 999);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txt3_Nia);
@@ -1650,7 +1675,7 @@
         private TextBox txt54_Observaciones;
         private Label label57;
         private CheckBox txt53_NoEntregoDocProbatorio;
-        private TextBox txt100_NombreDirector;
+        private TextBox txt54_NombreDirector;
         private Label label62;
         private Label label61;
         private TextBox txt51_Turno;
@@ -1666,5 +1691,7 @@
         private Button btnImprimir;
         private ComboBox txt52_Grupo;
         private ComboBox txt52_Grado;
+        private TextBox txt53_InscritoEn;
+        private Label label49;
     }
 }
